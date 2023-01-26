@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Excel to HTML Table | Javacodepoint</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>    
+
+
+<style>
+
+
+
+.scheduletable{
+
+border-collapse: collapse;
+ width: 100%;
+ border: .5px solid #000;
+
+
+}
+
+.scheduletable th{
+
+background-color: #062136;
+height: 30px;
+text-align: left;
+padding: 10px;
+font-family: Montserrat, "Montserrat Black", 
+       "Montserrat ExtraBold", 
+       "Montserrat ExtraLight", 
+       "Montserrat Light", 
+       "Montserrat Medium", 
+       "Montserrat SemiBold", 
+       "Montserrat Thin";
+
+       color: #ffffff;
+
+}
+
+.scheduletable td {
+
+ font-size: 16px;
+ text-align: left;
+ padding: 10px;
+ font-family: Montserrat, "Montserrat Black", 
+       "Montserrat ExtraBold", 
+       "Montserrat ExtraLight", 
+       "Montserrat Light", 
+       "Montserrat Medium", 
+       "Montserrat SemiBold", 
+       "Montserrat Thin";
+
+}
+
+.scheduletable button{
+
+width: 100px;
+height: 30px;
+background-color: orange;
+border: 0;
+border-radius: 10px;
+font-family: Montserrat, "Montserrat";
+cursor: pointer;
+color: #fff;
+text-decoration: none;
+
+}
+
+.scheduletable button a{
+  color: #fff;
+text-decoration: none;
+
+}
+
+.scheduletable button:hover{
+
+  
+background-color: #062136;
+
+
+
+}
+
+
+.scheduletable tr:nth-child(2n){
+
+background-color: #dddddd;
+
+}
+
+.scheduletable td:nth-child(2) a:link{
+
+
+text-decoration: none;
+color: darkslategray;
+
+
+}
+
+</style>
+
+
+
+  </head>
+  <body>
+    <h1>Upload public schedule excel file</h1>
+    <!-- Input element to upload an excel file -->
+    <input type="file" id="file_upload" />
+    <button onclick="upload()">Upload</button>  
+    <br>
+    <br>
+    <!-- table to display the excel data -->
+    <table class="scheduletable" id="display_excel_data"></table>
+    <script>
+     
+      // Method to upload a valid excel file
+      function upload() {
+        var files = document.getElementById('file_upload').files;
+        if(files.length==0){
+          alert("Please choose any file...");
+          return;
+        }
+        var filename = files[0].name;
+        var extension = filename.substring(filename.lastIndexOf(".")).toUpperCase();
+        if (extension == '.XLS' || extension == '.XLSX') {
+            //Here calling another method to read excel file into json
+            excelFileToJSON(files[0]);
+        }else{
+            alert("Please select a valid excel file.");
+        }
+      }
+       
+      //Method to read excel file and convert it into JSON 
+      function excelFileToJSON(file){
+          try {
+            var reader = new FileReader();
+            reader.readAsBinaryString(file);
+            reader.onload = function(e) {
+ 
+                var data = e.target.result;
+                var workbook = XLSX.read(data, {
+                    type : 'binary'
+                });
+                var result = {};
+                var firstSheetName = workbook.SheetNames[0];
+                //reading only first sheet data
+                var jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName]);
+                //displaying the json result into HTML table
+                displayJsonToHtmlTable(jsonData);
+                }
+            }catch(e){
+                console.error(e);
+            }
+      }
+       
+      //Method to display the data in HTML Table
+      function displayJsonToHtmlTable(jsonData){
+        var table=document.getElementById("display_excel_data");
+        if(jsonData.length>0){
+            var htmlData='<tr><th>Code</th><th>Course</th><th>Duration</th><th>Dates</th><th>Time</th><th>Enrol</th></tr>';
+            for(var i=0;i<jsonData.length;i++){
+                var row=jsonData[i];
+                htmlData+='<tr><td>'+row["Code"] + 
+                    '</td><td>'+row["Course"] + 
+                      '</td><td>'+row["Duration"]+
+                        '</td><td>'+row["Dates"]+
+                          '</td><td>'+row["Time"]+
+                        '</td><td><button><a href="#dvReg">Register</a></button></td></tr>';
+            }
+            table.innerHTML=htmlData;
+        }else{
+            table.innerHTML='There is no data in Excel';
+        }
+      }
+    </script>
+  </body>
+</html>
