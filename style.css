@@ -1,0 +1,139 @@
+.body {
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.popfont {
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.dark navbar {
+
+    background-color: black;
+}
+
+.curfont {
+
+    font-family: 'Arizonia', cursive;
+    font-size: 1.7em;
+    background: -webkit-linear-gradient(60deg, #00a79d, #27aae1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro {
+    background-image: url(Images/intro-bacground.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+}
+
+.coloredback {
+    background-image: linear-gradient(60deg, #00a79d, #27aae1);
+    border: none;
+}
+
+.coloredback1 {
+    background-image: linear-gradient(60deg, #00a79d, #27aae1);
+    border: none;
+}
+
+.coloredfont {
+
+    background: -webkit-linear-gradient(60deg, #00a79d, #27aae1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.coloredback:hover {
+    background-image: linear-gradient(90deg, #27aae1, #00a79d);
+    border: none;
+}
+
+
+.navhover a:hover {
+
+    background: -webkit-linear-gradient(60deg, #00a79d, #27aae1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list-group-item:hover {
+
+    background-image: linear-gradient(90deg, #27aae1, #00a79d);
+    border: none;
+
+}
+
+.list-group {
+
+    border: none !important;
+}
+
+.list-group-item:first-child {
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.experience {
+    height: 100%;
+
+}
+
+.card {
+
+    border: none;
+    border: 2px solid #27aae1;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+
+}
+
+.card-body {
+
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+
+}
+
+.b-bg {
+
+    background-color: black;
+
+}
+
+.img-height {
+
+    height: i;
+
+}
+
+.form-input {
+
+    background-color: transparent;
+
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: transparent;
+    border: 0px solid;
+}
