@@ -985,7 +985,7 @@ video {
 }
 
 .about-me-background{
-  background-image: url('/images/workstation-background.jpg');
+  background-image: url('images/workstation-background.jpg');
   min-height: 100vh;
 }
 
