@@ -990,7 +990,7 @@ video {
 }
 
 .about-me-background3{
-  background-image: url(images/stefan-about-me.png');
+  background-image: url('images/stefan-about-me.png');
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 100vw auto;
