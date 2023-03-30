@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VisualStoryTeller - Stefen Rajendran</title>
-    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
     <script src="https://kit.fontawesome.com/87e15717c1.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
@@ -14,43 +14,44 @@
 
 <body class="box-border transition ease-linear duration-200">
 
-    <div class="header lg:p-5 p-3 bg-black z-[99999] lg:fixed lg:top-0 lg:left-0 w-full">
-        <nav class="lg:flex lg:justify-between lg:align-middle text-white lg:w-5/6 w-11/12 mx-auto justify-between flex ">
+    <div class="header lg:p-5 p-3 bg-black z-[99999] fixed lg:top-0 lg:left-0 w-full">
+        <nav
+            class="lg:flex lg:justify-between lg:align-middle text-white lg:w-5/6 w-11/12 mx-auto justify-between flex ">
 
             <img src="images/vst-logo-white.png" alt="vst-logo" class="lg:w-1/4 lg:m-0 w-2/3">
 
             <div id="mobilebutton" class="lg:hidden block"><span class="fa fa-bars" aria-hidden="true"></span></div>
 
             <ul class="lg:flex lg:w-[50%] lg:justify-between place-content-center align-middle hidden">
-                
-                    <li class="p-2 font-bold"><a href="#intro">Home</a></li>
-               
-               
-                    <li class="p-2 font-bold"> <a href="#about-me">About me</a></li>
-              
-                
-                    <li class="p-2 font-bold"><a href="#works">Vlogs</a></li>
-            
-               
-                    <li class="p-2 font-bold"> <a href="#gear">Get in touch </a></li>
-               
+
+                <li class="p-2 font-bold"><a href="#intro">Home</a></li>
+
+
+                <li class="p-2 font-bold"> <a href="#about-me">About me</a></li>
+
+
+                <li class="p-2 font-bold"><a href="#works">Vlogs</a></li>
+
+
+                <li class="p-2 font-bold"> <a href="#gear">Get in touch </a></li>
+
 
             </ul>
         </nav>
     </div>
-    <div id="mobilenav" class="mobile-menu bg-black text-white hidden ">
+    <div id="mobilenav" class="mobile-menu bg-black text-white hidden fixed z-50 w-full top-12">
         <ul class="lg:w-80 lg:justify-between lg:hidden font-bold text-center bg-black">
             <a href="#intro">
-                <li class="p-2">Home</li>
+                <li class="p-2 mli">Home</li>
             </a>
             <a href="#about-me">
-                <li class="p-2">About me</li>
+                <li class="p-2 mli">About me</li>
             </a>
             <a href="#works">
-                <li class="p-2">Vlogs</li>
+                <li class="p-2 mli">Vlogs</li>
             </a>
-            <a href="#about-me">
-                <li class="p-2">Get in touch</li>
+            <a href="#gear">
+                <li class="p-2 mli">Get in touch</li>
             </a>
         </ul>
     </div>
@@ -74,7 +75,8 @@
                     </div>
 
                 </div>
-                <img src="images/stefan-intro.png" alt="image-2" class="lg:block lg:absolute bottom-0 left-0 hidden z-[777]">
+                <img src="images/stefan-intro.png" alt="image-2"
+                    class="lg:block lg:absolute bottom-0 left-0 hidden z-[777]">
                 <img src="images/stefan-intro2.png" alt="image-2" class="lg:hidden relative col-span-1 block">
             </div>
 
@@ -157,7 +159,16 @@
         <section id="works" class="bg-black py-16">
             <h1 class="lg:text-9xl font-bold text-white text-center text-6xl">Featured Vlogs</h1>
             <div class="grid grid-cols-3 gap-6 w-5/6  m-auto">
-                <div class="bg-white rounded-2xl aspect-video col-span-3"></div>
+
+
+
+
+                <div id="videCont" class="bg-white rounded-2xl aspect-video col-span-3 overflow-hidden">
+
+               
+                     
+
+                </div>
                 <div class="bg-white rounded-2xl aspect-video lg:col-span-1 col-span-3"></div>
                 <div class="bg-white rounded-2xl aspect-video lg:col-span-1 col-span-3"></div>
                 <div class="bg-white rounded-2xl aspect-video lg:col-span-1 col-span-3"></div>
@@ -211,12 +222,35 @@
 
         const menuBtn = document.querySelector("#mobilebutton");
         const navigation = document.querySelector("#mobilenav");
+        const mobilelistitems = document.querySelectorAll(".mli");
+        const mobilenav = document.querySelector("#mobilenav");
+
+        mobilelistitems.forEach((mobilelistitem) => {
+            $(mobilelistitem).click(function () {
+                $(navigation).slideToggle("fast");
+            });
+
+        })
 
         $(document).ready(function () {
             $(menuBtn).click(function () {
                 $(navigation).slideToggle("slow");
             });
         });
+
+
+        // video controls
+
+        var video1 = document.getElementById("video1");
+        var videoViewer = document.getElementById("videoViewer");
+
+        function PlayVideo() {
+
+            videoViewer.style.display = 'block';
+            video1.play();
+
+        }
+
 
     </script>
 </body>
