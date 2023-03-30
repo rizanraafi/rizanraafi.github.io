@@ -981,16 +981,16 @@ video {
 }
 
 .herobackground {
-  background-image: url('../src/images/herobackground.jpg');
+  background-image: url('images/herobackground.jpg');
 }
 
 .about-me-background{
-  background-image: url('../src/images/workstation-background.jpg');
+  background-image: url('/images/workstation-background.jpg');
   min-height: 100vh;
 }
 
 .about-me-background3{
-  background-image: url('../images/stefan-about-me.png');
+  background-image: url(images/stefan-about-me.png');
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 100vw auto;
