@@ -1,247 +1,502 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VisualStoryTeller - Stefen Rajendran</title>
-    <link rel="stylesheet" href="output.css" />
-    <script src="https://kit.fontawesome.com/87e15717c1.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+    <title>Rizan Raafi - Resume | Software Developer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/87e15717c1.css" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYLVWMDLQX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VYLVWMDLQX');
+    </script>
+
+
 
 </head>
 
-<body class="box-border transition ease-linear duration-200">
-
-    <div class="header lg:p-5 p-3 bg-black z-[99999] fixed lg:top-0 lg:left-0 w-full">
-        <nav
-            class="lg:flex lg:justify-between lg:align-middle text-white lg:w-5/6 w-11/12 mx-auto justify-between flex ">
-
-            <img src="images/vst-logo-white.png" alt="vst-logo" class="lg:w-1/4 lg:m-0 w-2/3">
-
-            <div id="mobilebutton" class="lg:hidden block"><span class="fa fa-bars" aria-hidden="true"></span></div>
-
-            <ul class="lg:flex lg:w-[50%] lg:justify-between place-content-center align-middle hidden">
-
-                <li class="p-2 font-bold"><a href="#intro">Home</a></li>
-
-
-                <li class="p-2 font-bold"> <a href="#about-me">About me</a></li>
-
-
-                <li class="p-2 font-bold"><a href="#works">Vlogs</a></li>
-
-
-                <li class="p-2 font-bold"> <a href="#gear">Get in touch </a></li>
-
-
-            </ul>
-        </nav>
-    </div>
-    <div id="mobilenav" class="mobile-menu bg-black text-white hidden fixed z-50 w-full top-12">
-        <ul class="lg:w-80 lg:justify-between lg:hidden font-bold text-center bg-black">
-            <a href="#intro">
-                <li class="p-2 mli">Home</li>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top">
+        <div class="container-lg">
+            <a href="#intro" class="navbar-brand">
+                <span class="fw-bold text-secondary">
+                    RESUME</span>
             </a>
-            <a href="#about-me">
-                <li class="p-2 mli">About me</li>
-            </a>
-            <a href="#works">
-                <li class="p-2 mli">Vlogs</li>
-            </a>
-            <a href="#gear">
-                <li class="p-2 mli">Get in touch</li>
-            </a>
-        </ul>
-    </div>
-    <main>
-        <section id="intro" class="herobackground bg-fixed bg-center bg-cover min-h-[800px] relative">
+            <!-- toogle button for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div class="w-5/6 mx-auto grid grid-cols-1 lg:gap-72 gap-52">
-                <div class="relative lg:top-64 z-10 top-32 col-span-1">
-                    <h1 class="lg:text-9xl font-bold text-white lg:leading-[6rem] leading-12 text-6xl">Stefen <br />
-                        <span class="lg:text-8xl text-5xl">
-                            Rajendran </span>
-                    </h1>
 
-                    <div class="lg:absolute lg:top-14 lg:right-0 lg:w-64 text-white lg:z-30 relative top-12 w-full">
-                        <h4 class="text-3xl">Professional Video Blogger</h4>
-                        <p class="pt-5">Creating a strong brand presence
-                            through an identity that
-                            communicates core brand values,
-                            product offerings, and value driven
-                            information to the audience.</p>
+            <!-- nav bar link -->
+            <div class="collapse navbar-collapse justify-content-end align-center " id="main-nav">
+
+                <ul class="navbar-nav fw-bolder lead">
+
+                    <li class="nav-item me-5 navhover">
+                        <a class="nav-link " href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item me-5 navhover">
+                        <a class="nav-link " href="#literacy">Literacy</a>
+                    </li>
+                    <li class="nav-item me-5 navhover">
+                        <a class="nav-link " href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item me-5 navhover">
+                        <a class="nav-link" href="#get-in-touch">Get in touch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Images/Rizan - Resume - Developer.pdf" download="Rizan - Resume - Developer.pdf"
+                            class="popfont btn rounded-pill coloredback text-white font-bold mt-2">Download CV</a>
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+    </nav>
+
+    <section class="intro" id="intro">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-10 text-center col-md-5 text-md-start">
+                    <h1 class="display-3 fw-bolder text-white"><span class="curfont">Hi.</span> I am RIZAN</h1>
+                    <h4 class="lead fw-bolder text-white">Revitalizing software dev passion with new effort.</h2>
+                        <p class="text-white text-muted">I'm making a transition back to the development field! With 4
+                            years of digital marketing experience and a strong
+                            creative design background, I bring a unique perspective to web development. As a web
+                            developer, I can understand the technical aspects of development while creating visually
+                            appealing designs with a user-centric mindset. I am confident in my ability to excel in the
+                            software industry and invite you to review my resume. Feel free to message me for more
+                            details on my skills.</p>
+                        <a href="#experience"
+                            class="popfont btn rounded-pill coloredback text-white mt-3 px-5 me-md-3">Learn
+                            more</a>
+
+
+                </div>
+                <div class="col-10 col-md-6 text-end mt-4">
+                    <img src="Images/cv-pic-new1.png" width="500" alt="" class="img-fluid">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="experience b-bg py-lg-5 large-header" id="experience">
+
+        <div class="container ">
+            <div class="align-middle">
+                <h1 class="display-1 fw-bold text-center coloredfont py-5">Experience</h1>
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-10 text-center col-md-10 col-lg-5 text-lg-start mb-4 me-lg-5" data-aos="fade-right">
+
+                      
+                        <h1 class="display-5 fw-bolder text-white lh-1">INDUSTRY</br>EXPERIENCE</h1>
+
+                    </div>
+
+                    <div class="col-12 col-md-10 col-lg-5 pb-5">
+                        <div class="list-group coloredback">
+                            <a class="list-group-item list-group-item-action text-white bg-black" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Web Designer | Digital Markerter</h5>
+                                    <small class="text-muted fw-bold">Present</small>
+                                </div>
+                                <p class="mb-1">Trainocate Group LLC</p>
+
+                            </a>
+                            <a class="list-group-item list-group-item-action text-white bg-black">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">e-Business Executive</h5>
+                                    <small class="text-muted">2019-2022</small>
+                                </div>
+                                <p class="mb-1">Aitken Spence Travels (Pvt) </p>
+
+                            </a>
+                            <a class="list-group-item list-group-item-action text-white bg-black">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Digital Marketing Executive</h5>
+                                    <small class="text-muted">2018-2019</small>
+                                </div>
+                                <p class="mb-1">Aclatic (Pvt) Ltd</p>
+
+                            </a>
+                            <a class="list-group-item list-group-item-action text-white bg-black">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Digital Marketing Specialist</h5>
+                                    <small class="text-muted">2017-2018</small>
+                                </div>
+                                <p class="mb-1">Boomerang International (Pvt) Ltd</p>
+
+                            </a>
+                            <a class="list-group-item list-group-item-action text-white bg-black">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Software Developer</h5>
+                                    <small class="text-muted">2015-2017</small>
+                                </div>
+                                <p class="mb-1">Dynasty Solutions</p>
+
+                            </a>
+                            <a class="list-group-item list-group-item-action text-white bg-black">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Software Developer</h5>
+                                    <small class="text-muted">2014-2015</small>
+                                </div>
+                                <p class="mb-1">Freelance</p>
+
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="literacy bg-black py-5" id="literacy">
+
+        <div class="container popfont">
+
+            <div class="row justify-content-around align-items-center">
+
+                <h1 class="display-3 fw-bold text-center coloredfont">Literacy</h1>
+                <div class="row pt-5 justify-content-center">
+                    <div class="col-10 col-md-8 col-lg-4 text-center mb-3 pb-md-1">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">B.Eng Software Engineering (Reading)</h5>
+                                <p class="card-text">ESoft Metro Campus - Colombo</p>
+                                <a href="#" class="btn coloredback text-white fw-bold disabled">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-8 col-lg-4 text-center mb-3 pb-md-1">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">HND in Computing and System Development</h5>
+                                <p class="card-text">ESOFT Metro Campus - Kandy</p>
+                                <a href="https://drive.google.com/file/d/18GP2MwKZLod6wF4wZcBcMGL2qqa8Gejs/view?usp=share_link"
+                                    target="_blank" class="btn coloredback text-white fw-bold">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-8 col-lg-4 text-center mb-3 pb-md-1">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Diploma in Web Engineering Specialist</h5>
+                                <p class="card-text">Londontec Int. - Nugegoda</p>
+                                <a href="https://drive.google.com/file/d/19Z5KDjue1_Unx6MrUkrfLCIeNMOdx7yF/view?usp=share_link"
+                                    target="_blank" class="btn coloredback text-white fw-bold">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-lg-2 justify-content-center">
+                    <div class="col-10 col-md-8 col-lg-4 text-center mb-3 pb-md-1">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Professional Certificate in Java Technologies</h5>
+                                <p class="card-text">Java Institute - Kandy</p>
+                                <a href="https://drive.google.com/file/d/12Jjr6hF9xm0tEn9XG_17W7msSdYMWO9c/view?usp=share_link"
+                                    target="_blank" class="btn coloredback text-white fw-bold">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-8 col-lg-4 text-center mb-3 pb-md-1">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Digital Marketing - Fundamentals</h5>
+                                <p class="card-text">Google Digital Garage</p>
+                                <a href="https://drive.google.com/file/d/1oWVGJQnzaRUddNhDpGzaJoIf_v8em1es/view?usp=share_link"
+                                    class="btn coloredback text-white fw-bold">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-8 col-lg-4 text-center mb-3 pb-md-1">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Social Media Marketing</h5>
+                                <p class="card-text">Hubspot Academy</p>
+                                <a href="#" class="btn coloredback text-white fw-bold">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+    </section>
+
+    <section class="skills bg-black py-5" id="skills">
+
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+
+                <h1 class="display-3 fw-bold text-center coloredfont my-5">Skills</h1>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-4 col-sm-10">
+                        <div class="card">
+                            <img src="Images/reset-thumbnail.jpg" class="card-img-top" alt="reset-thumbnail">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Landing Page - Bootstrap</h5>
+                                <p class="card-text">This is landing page done for a LMS product and completed using
+                                    Bootstrap 5. This is mobile friendly as well.</p>
+                                <a href="https://rizanraafi.github.io/LandingPagesDesigns/RESET/" class="btn coloredback text-white">View Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-10 col-lg-4 col-sm-10">
+                        <div class="card">
+                            <img src="Images/srilankamoments-thumbnail.jpg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Video Background page - Magazine</h5>
+                                <p class="card-text">Video background landing page to showcasing destination Sri Lanka.
+                                    Done using custom CSS and media queries.</p>
+                                <a href="https://rizanraafi.github.io/LandingPagesDesigns/SriLankaMoments/" class="btn coloredback text-white">View Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-10 col-lg-4 col-sm-10">
+                        <div class="card">
+                            <img src="Images/shopping-cart-thumbnail.jpg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Shopping Cart - Home Layout</h5>
+                                <p class="card-text">Shopping cart webpage, done using HTML, CSS and media queries. The page is fully mobile responsive interface for a seamless shopping experience.</p>
+                                <a href="https://rizanraafi.github.io/LandingPagesDesigns/ShoppingCart/" class="btn coloredback text-white">View Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-10 col-lg-4 col-sm-10">
+                        <div class="card">
+                            <img src="Images/stefan-website-thumbnail.jpg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Web Site - Videograghper</h5>
+                                <p class="card-text">This is a mobile-responsive single-page website designed for a videographer using TailwindCSS.</p>
+                                <a href="https://rizanraafi.github.io/LandingPagesDesigns/VisualStoryTeller/" class="btn coloredback text-white">View Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <a href="#" class="btn coloredback text-white rounded-pill fw-bold col-8 col-lg-3 mt-5">Graphic Desiging Skills</a>
+            </div>
+
+
+<div class="row justify-content-center">
+            
+            <div class="col-11 col-xl-10 text-center mt-5">
+                <h3 class="display-4 text-white text-md-center">Key skills</h3>
+                <p class="lead fw-bold text-white pt-3">Developement</p>
+                <div class="row text-white justify-content-center">
+                    <div class="col-2 text-center">
+                        <img src="Images/Icons/HTML.png" class="img-fluid h-50" alt="skill-html">
+                        <p>HTML</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/css.png" class="img-fluid h-50" alt="skill-html">
+                        <p>CSS</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/javascript.png" class="img-fluid h-50" alt="">
+                        <p>JS</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/bootstrap.png" class="img-fluid h-50" alt="">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/tailwindcss.png" class="img-fluid h-50" alt="">
+                        <p>TailwindCSS</p>
+                    </div>
+                 
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/php.png" class="img-fluid h-50" alt="">
+                        <p>PHP</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/mysql.png" class="img-fluid h-50" alt="skill-html">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/react.png" class="img-fluid h-50 " alt="skill-html">
+                        <p>ReactJS</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/NodeJS.png" class="img-fluid h-50" alt="">
+                        <p>NodeJS</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/mongodb.png" class="img-fluid h-50" alt="">
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/java.png" class="img-fluid h-50  " alt="skill-html">
+                        <p>Java</p>
+                    </div>
+                    <div class="col-3 col-md-2  text-center">
+                        <img src="Images/Icons/c.png" class="img-fluid h-50" alt="skill-html">
+                        <p>C#</p>
                     </div>
 
                 </div>
-                <img src="images/stefan-intro.png" alt="image-2"
-                    class="lg:block lg:absolute bottom-0 left-0 hidden z-[777]">
-                <img src="images/stefan-intro2.png" alt="image-2" class="lg:hidden relative col-span-1 block">
-            </div>
-
-        </section>
-
-        <section id="topics" class="bg-white pt-10">
-            <h1 class="text-center pb-5 text-xl">WHAT YOU'LL FIND HERE</h1>
-            <div class="lg:w-2/3 lg:flex justify-center flex-wrap mx-auto text-center flex w-5/6 pb-10 text-2xl">
-                <h3 class="lg:text-3xl font-bold lg:p-10 p-3">Storytelling</h3>
-                <h3 class="lg:text-3xl font-bold lg:p-10 p-3">Creativity</h3>
-                <h3 class="lg:text-3xl font-bold lg:p-10 p-3">Humour</h3>
-                <h3 class="lg:text-3xl font-bold lg:p-10 p-3">Interaction</h3>
-                <h3 class="lg:text-3xl font-bold lg:p-10 p-3">Information</h3>
-                <h3 class="lg:text-3xl font-bold lg:p-10 p-3">Exclusivity</h3>
-                <h3 class="lg:text-3xl font-bold lg:p-10 p-3">Some Muscle gains</h3>
-            </div>
-        </section>
-
-        <section id="about-me" class="bg-fixed bg-center bg-cover about-me-background">
-
-            <div class="grid grid-cols-3 pt-10 w-11/12 relative mx-auto">
-
-
-                <div class="col-span-1 lg:block hidden">
-                    <img src="images/stefan-about-me2.png" alt="image-2"
-                        class="lg:absolute bottom-0 left-0 -z-\[50\] w-[500px] sm:relative">
+                <p class="lead fw-bold text-white">Designing</p>
+                <div class="row text-white justify-content-center">
+                    <div class="col-3 col-md-2 text-center ">
+                        <img src="Images/Icons/adobeillustrator.png" class="h-50 img-fluid" alt="skill-html">
+                        <p class="text-center">Adobe Illustrator</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/photoshop.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Adobe Photoshop</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/premierepro.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Adobe Premiere Pro</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/canva.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Canva</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/figma.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Figma</p>
+                    </div>
                 </div>
 
-                <div class="lg:col-span-2 col-span-3 justify-center">
-                    <h1 class="lg:text-9xl font-bold lg:py-16 py-8 text-6xl text-left">About me</h1>
-                    <div class="grid lg:grid-cols-3 gap-14 sm:grid-col-2 place-content-center">
 
-                        <div class="lg:col-span-2 lg:pl-14 sm:col-span-1 ">A creative enthusiast, a brand storyteller,
-                            and a
-                            public speaker
-                            with a furious vision to share value driven and impactful stories, Verbally & Visually!
-                            <br /><br />
-                            My professional ambitions for the past six consecutive years have been predominantly in,
-                            Creative Marketing, Business Development, and the Tourism Industry.
-                            <br /><br />
-                            As an individual, I would like to see my career path progress completely toward the status
-                            quo and achieve great heights in the Tourism and Marketing industry through Visual
-                            Storytelling. The relentless passion which dwells within me for Storytelling and Creativity
-                            pushes me to bring something new to the table every single day and to leave no stone
-                            unturned with my creations.
+                <p class="lead fw-bold text-white">Other tools</p>
+                <div class="row text-white justify-content-center justify-content-xl-start">
 
-                        </div>
-                        <div class="col-span-1 font-bold text-lg text-center">Find me on Social Media</div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/bee-pro.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Bee PRO</p>
                     </div>
-
-                    <div
-                        class="flex flex-wrap my-16 py-5 lg:justify-evenly justify-center border-gray-700 border-y-4 font-bold mx-auto">
-                        <div class="text-center py-5 lg:w-auto w-full">
-                            <h1 class="text-5xl">8,621,345</h1>
-                            <p>SUBSCRIBES</p>
-                        </div>
-                        <div class="text-center py-5 lg:w-auto w-full">
-                            <h1 class="text-5xl">480</h1>
-                            <p>VIDEOS</p>
-                        </div>
-                        <div class="text-center py-5 lg:w-auto w-full">
-                            <h1 class="text-5xl">14%</h1>
-                            <p>ENGAGEMENT RATE </p>
-                        </div>
-
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/mailchimp.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Mail Chimp</p>
                     </div>
-                    <h1 class="text-4xl font-bold text-center">Collobrate Brands</h1>
-                    <div class="flex flex-wrap justify-center py-4 mx-auto w-5/6">
-                        <img src="images/logo-2.svg" alt="">
-                        <img src="images/logo-2.svg" alt="">
-                        <img src="images/logo-2.svg" alt="">
-                        <img src="images/logo-2.svg" alt="">
-                        <img src="images/logo-2.svg" alt="">
-                        <img src="images/logo-2.svg" alt="">
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/analytics.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Google Analytics</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/googleads.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Google Ads</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/metaads.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>Meta Ads</p>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="Images/Icons/linkedin-ads.png" class="h-50 img-fluid" alt="skill-html">
+                        <p>LinkedIn Ads</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="works" class="bg-black py-16">
-            <h1 class="lg:text-9xl font-bold text-white text-center text-6xl">Featured Vlogs</h1>
-            <div class="grid grid-cols-3 gap-6 w-5/6 m-auto">
+        </div>
+        </div>
 
 
 
 
-                <div class="bg-white rounded-2xl aspect-video col-span-3">
+    </section>
 
+    <section class="get-in-touch coloredback1" id="get-in-touch">
 
+        <div class="container">
+            <div class="row justify-content-center pt-5">
+                <div class="col-11 bg-black rounded-5 mb-5 pb-5">
+                    <h1 class="display-4 fw-bold text-center text-white py-4">Get in touch</h1>
+
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-md-5 col-lg-4  bg-white me-md-5 py-3 rounded-3 text-center ">
+
+                            <div class="d-flex justify-content-center align-items-center"><img
+                                    src="Images/Icons/email.png" width="40" class="img-fluid"></td>
+                                <span class="lead ms-3 fw-bold">rizan.raafi@gmail.com</span>
+                            </div>
+
+                        </div>
+                        <div class="col-10 col-md-5 mt-3 mt-md-0 col-lg-4 bg-white py-3 rounded-3 text-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="Images/Icons/phone-call.png" width="40" class="img-fluid"></td>
+                                <span class="lead ms-3 fw-bold"><a href="https://wa.me/+94777112707" target="_blank"
+                                        style="text-decoration: none; color: inherit;" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="Click to message on WhatsApp">+94 777 112
+                                        707</a></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center pt-4">
+                            <h2 class="display-5 text-center coloredfont mb-4">Drop a message</h2>
+                            <div class="col-12 col-md-8  col-xl-6 text-center popfont">
+
+                                <form action="">
+                                    <input class="w-100 bg-black border-0 border-bottom form-input text-white"
+                                        type="text" placeholder="Name">
+                                    <input class="w-100 border-0 border-bottom form-input text-white mt-3" type="text"
+                                        placeholder="Email">
+
+                                    <textarea
+                                        class="w-100 border-0 border-bottom form-input text-white text-bottom mt-3"
+                                        placeholder="Your message"></textarea></br>
+                                    <button type="submit"
+                                        class="popfont btn btn-lg rounded-pill coloredback text-white mt-3 px-5 disabled">Send</button>
+                                </form>>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
-                <div class="bg-white rounded-2xl aspect-video lg:col-span-1 col-span-3"></div>
-                <div class="bg-white rounded-2xl aspect-video lg:col-span-1 col-span-3"></div>
-                <div class="bg-white rounded-2xl aspect-video lg:col-span-1 col-span-3"></div>
-
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="gear">
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
 
-            <div class="grid lg:grid-cols-2 gap-14 w-5/6 m-auto py-36 grid-cols-1">
-                <h2 class="text-6xl font-bold text-center col-span-full">Let's Talk</h2>
-                <div class="col-span-1 lg:border-r-2 sm:border-0">
-                    <h4 class="text-4xl leading-normal font-bold text-gray-600">I love to collaborate and make awesome
-                        content. Let’s talk!</h4>
-                    <hr class="border-t-4 border-gray-700 w-16 my-10">
-                    </hr>
-                    <p class="font-bold text-gray-700 py-4">GET IN TOUCH</p>
-
-                    <p class="flex align-middle text-lg mt-2"> <span class="fa-solid fa-envelope mr-4 text-2xl"></span>
-                        stefan.rajendran@gmail.com</p>
-                    <p class="flex align-middle text-lg  mt-2"> <span
-                            class="fa-solid fa-phone-volume mr-4 text-2xl"></span>+94 7777 112 707</p>
-
-                </div>
-
-                <div class="col-span-1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="https://kit.fontawesome.com/87e15717c1.js" crossorigin="anonymous"></script>
 
 
-                    <p>SEND A MESSAGE</p>
-                    <form action="" class="text-sm">
-                        <input type="text" name="name" id="name" placeholder="Name">
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <input type="subject" name="subject" id="subject" placeholder="subject">
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                        <input
-                            class="border-gray-900 border-6 rounded-full w-1/3 hover:bg-black hover:text-white hover:cursor-pointer transition ease-in-out duration-300 "
-                            type="submit" name="submit" value="Submit">
-                    </form>
-
-
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-
-
-
-    <script type="text/javascript">
-
-        const menuBtn = document.querySelector("#mobilebutton");
-        const navigation = document.querySelector("#mobilenav");
-        const mobilelistitems = document.querySelectorAll(".mli");
-        const mobilenav = document.querySelector("#mobilenav");
-
-        mobilelistitems.forEach((mobilelistitem) => {
-            $(mobilelistitem).click(function () {
-                $(navigation).slideToggle("fast");
-            });
-
-        })
-
-        $(document).ready(function () {
-            $(menuBtn).click(function () {
-                $(navigation).slideToggle("slow");
-            });
-        });
-
-
-        // video controls
-
-
-    </script>
 </body>
 
 </html>
