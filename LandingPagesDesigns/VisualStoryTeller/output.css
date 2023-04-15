@@ -993,11 +993,11 @@ video {
 }
 
 .herobackground {
-  background-image: url('/src/images/herobackround2.jpg');
+  background-image: url('images/herobackround2.jpg');
 }
 
 .about-me-background {
-  background-image: url('/src/images/workstation-background.jpg');
+  background-image: url('images/workstation-background.jpg');
   min-height: 100vh;
 }
 
